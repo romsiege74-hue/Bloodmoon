@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Bloodmoon.MODID)
@@ -30,6 +31,7 @@ public class Bloodmoon
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        GeckoLib.initialize();
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
