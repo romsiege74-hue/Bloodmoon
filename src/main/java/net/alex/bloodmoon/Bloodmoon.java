@@ -1,6 +1,9 @@
 package net.alex.bloodmoon;
 
 import com.mojang.logging.LogUtils;
+import net.alex.bloodmoon.item.ModCreativeModeTabs;
+import net.alex.bloodmoon.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +33,10 @@ public class Bloodmoon
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
 
         GeckoLib.initialize();
         // Register ourselves for server and other game events we are interested in
