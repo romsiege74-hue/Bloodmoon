@@ -14,6 +14,11 @@ public class ModItems {
     public static final RegistryObject<Item> DAITEM = ITEMS.register("daitem",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> QUISTIAN = ITEMS.register("quistian",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROBBY = ITEMS.register("robby",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

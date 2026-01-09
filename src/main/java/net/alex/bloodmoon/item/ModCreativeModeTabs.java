@@ -18,6 +18,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.bloodmoon_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.DAITEM.get());
+                        output.accept(ModItems.QUISTIAN.get());
+                        output.accept(ModItems.ROBBY.get());
                     })
                     .build());
 
